@@ -6,16 +6,21 @@ void zadanie2();
 void zadanie3(int tab[], int n);
 void srednia(int tab[], int n);
 void minimum(int tab[], int n);
+void zadanie4(int tab[], int n, int x);
 
 int main()
 {
-	//zadanie1();
-	//zadanie2();
+	zadanie1();
+	zadanie2();
 	const int n = 10;
 	int tab[n];
-	//zadanie3(tab, n);
-	//srednia(tab, n);
-	//minimum(tab, n);
+	zadanie3(tab, n);
+	srednia(tab, n);
+	minimum(tab, n);
+	int x;
+	cout << "podaj ilosc liczb do wpisania: ";
+	cin >> x;
+	zadanie4(tab, n, x);
 
 	
 }
@@ -81,9 +86,22 @@ void minimum(int tab[], int n) {
 	cout << "Minimum: " << min << endl;
 }
 
-void zadanie4() {
-
+void zadanie4(int tab[], int n, int x) {
+	for (int i = 0; i < n; i++) {
+		if (i < x) {
+			cin >> tab[i];
+		}
+		else {
+			tab[i] = 0;
+		}
+	}
+	cout << "Tablica: ";
+	for (int i = 0; i < n; i++) {
+		cout << tab[i] << " ";
+	}
 }
+
+
 
 
 
